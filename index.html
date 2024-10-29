@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Question</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            font-size: 1.2em;
+        }
+        .options {
+            margin-top: 10px;
+        }
+        .feedback {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">
+        Câu 1. Phản ứng nào sau đây là phản ứng thuận nghịch?
+    </div>
+    <div class="options">
+        <label><input type="radio" name="option" value="A"> A. \( \mathrm{Mg}+2\mathrm{HCl}\to\mathrm{MgCl}_2+\mathrm{H}_2 \)</label><br>
+        <label><input type="radio" name="option" value="B"> B. \( 2\mathrm{SO}_2+\mathrm{O}_2\leftrightarrows2\mathrm{SO}_3 \)</label><br>
+        <label><input type="radio" name="option" value="C"> C. \( \mathrm{C_2H_5OH}+3\mathrm{O_2}\xrightarrow{t^\circ}2\mathrm{CO_2}+3\mathrm{H_2O} \)</label><br>
+        <label><input type="radio" name="option" value="D"> D. \( 2\mathrm{KClO}_3\xrightarrow{t^\circ}2\mathrm{KCl}+3\mathrm{O}_2 \)</label>
+    </div>
+    <button onclick="checkAnswer()">Submit</button>
+    <div id="feedback" class="feedback"></div>
+
+    <script>
+        function checkAnswer() {
+            const options = document.getElementsByName('option');
+            let selectedAnswer = '';
+            for (const option of options) {
+                if (option.checked) {
+                    selectedAnswer = option.value;
+                    break;
+                }
+            }
+
+            const feedback = document.getElementById('feedback');
+            if (selectedAnswer === 'B') {
+                feedback.textContent = 'Correct! The answer is B.';
+                feedback.style.color = 'green';
+            } else {
+                feedback.textContent = 'Incorrect. Try again!';
+                feedback.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
