@@ -1,102 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Quiz</title>
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 10px;
-            background-color: #f0f2f5;
-        }
-        .quiz-container {
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-        }
-        .question-box {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            font-size: 1.3em;
-            font-weight: bold;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .option {
-            background-color: #ffffff;
-            color: #333;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            cursor: pointer;
-            border: 2px solid #ffffff;
-            transition: background-color 0.3s, border 0.3s;
-            font-size: 1em;
-        }
-        .option.correct {
-            background-color: #28a745;
-            border-color: #28a745;
-            color: white;
-        }
-        .option.incorrect {
-            background-color: #dc3545;
-            border-color: #dc3545;
-            color: white;
-        }
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .question-box {
-                font-size: 1.1em;
-                padding: 15px;
-            }
-            .option {
-                font-size: 0.9em;
-                padding: 12px;
-            }
-        }
-    </style>
 </head>
 <body>
-    <div class="quiz-container">
-        <div class="question-box">
-            Câu 1. Phản ứng nào sau đây là phản ứng thuận nghịch?
-        </div>
-        <div id="optionA" class="option" onclick="checkAnswer('A')">A. \( \mathrm{Mg}+2\mathrm{HCl}\to\mathrm{MgCl}_2+\mathrm{H}_2 \)</div>
-        <div id="optionB" class="option" onclick="checkAnswer('B')">B. \( 2\mathrm{SO}_2+\mathrm{O}_2\leftrightarrows2\mathrm{SO}_3 \)</div>
-        <div id="optionC" class="option" onclick="checkAnswer('C')">C. \( \mathrm{C_2H_5OH}+3\mathrm{O_2}\xrightarrow{t^\circ}2\mathrm{CO_2}+3\mathrm{H_2O} \)</div>
-        <div id="optionD" class="option" onclick="checkAnswer('D')">D. \( 2\text{KClO}_3\xrightarrow{t^\circ}2\text{KCl}+3\text{O}_2 \)</div>
-    </div>
-
-    <script>
-        function checkAnswer(selected) {
-            // Correct answer is 'B'
-            const correctAnswer = 'B';
-
-            // Clear previous selections
-            document.querySelectorAll('.option').forEach(option => {
-                option.classList.remove('correct', 'incorrect');
-            });
-
-            // Add classes based on whether the selected answer is correct
-            const selectedOption = document.getElementById('option' + selected);
-            if (selected === correctAnswer) {
-                selectedOption.classList.add('correct');
-            } else {
-                selectedOption.classList.add('incorrect');
-            }
-        }
-    </script>
+    <div id="question"></div>
+    <script src="script.js"></script>
 </body>
 </html>

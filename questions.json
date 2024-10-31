@@ -1,0 +1,27 @@
+[
+    {
+        "type": "multiple-choice",
+        "question": "What is the capital of France?",
+        "options": ["Paris", "London", "Berlin", "Madrid"],
+        "correct": "Paris"
+    },
+    {
+        "type": "multiple-choice",
+        "question": "Integral of \\( \\int x^2 \\, dx \\)",
+        "options": ["\\( \\frac{x^3}{3} + C \\)", "\\( x^3 + C \\)", "\\( \\frac{x^2}{2} + C \\)", "\\( \\ln(x) + C \\)"],
+        "correct": "\\( \\frac{x^3}{3} + C \\)"
+    },
+    {
+        "type": "true-false",
+        "question": "Khi nói về đột biến gen, có bao nhiêu phát biểu sau đây là đúng?",
+        "statements": [
+            {"text": "Đột biến gen xảy ra ở mọi vị trí của gen đều không làm ảnh hưởng đến phiên mã.", "correct": "sai"},
+            {"text": "Mọi đột biến gen đều chỉ có thể xảy ra nếu có tác động của tác nhân đột biến.", "correct": "sai"},
+            {"text": "Tất cả các đột biến gen đều có hại cho thể đột biến.", "correct": "sai"},
+            {"text": "Đột biến gen có thể xảy ra ở cả tế bào sinh dưỡng và tế bào sinh dục.", "correct": "đúng"},
+            {"text": "Gen đột biến luôn được di truyền cho thế hệ sau.", "correct": "sai"},
+            {"text": "Gen đột biến luôn được biểu hiện thành kiểu hình.", "correct": "sai"},
+            {"text": "Đột biến gen cung cấp nguyên liệu thứ cấp cho quá trình tiến hóa.", "correct": "sai"}
+        ]
+    }
+]
