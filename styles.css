@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,25 +91,36 @@ button:hover {
 
 /* Custom scrollbar styles */
 #question::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+    width: 12px;
 }
 
 #question::-webkit-scrollbar-track {
-    background: #333; /* Color of the track */
+    background: #333;
     border-radius: 10px;
 }
 
 #question::-webkit-scrollbar-thumb {
-    background-color: #007BFF; /* Color of the scrollbar handle */
+    background-color: #007BFF;
     border-radius: 10px;
-    border: 3px solid #222; /* Padding around scrollbar handle */
+    border: 3px solid #222;
 }
 
 #question::-webkit-scrollbar-thumb:hover {
-    background-color: #0056b3; /* Color when hovered */
+    background-color: #0056b3;
 }
 
 @media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #question {
+        max-height: 90vh;
+        margin-top: 20px;
+        width: 90%;
+    }
+
     button {
         width: 100%;
         font-size: 14px;
